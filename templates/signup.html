@@ -30,7 +30,8 @@
 					<img src="{% static 'images/img-01.png' %}" alt="IMG">
 				</div>
 
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" method="post" action="">
+                    {% csrf_token %}
 					<span class="login100-form-title">
 						Member Signup
 					</span>
@@ -76,17 +77,17 @@
 					</div>
 
 					 <div class="wrap-input100 " >
-						<input class="input100" type="text" name="cpass" placeholder="Bood Group">
+						<input class="input100" type="text" name="blood" placeholder="Bood Group">
                         <span class="focus-input100"></span>
 					</div>
 
 					 <div class="wrap-input100 " >
-						<input class="input100" type="text" name="cpass" placeholder="Age">
+						<input class="input100" type="text" name="age" placeholder="Age">
                         <span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 " >
-						<input class="input100" type="text" name="cpass" placeholder="Any other disease">
+						<input class="input100" type="text" name="any" placeholder="Any other disease">
                         <span class="focus-input100"></span>
 					</div>
 					
@@ -95,6 +96,14 @@
 							Signup
 						</button>
 					</div>
+
+                    <br>
+
+                    {% if messages %}
+                        {% for m in messages %}
+                                <p style="color: red">{{ m|safe }}</p>
+                        {% endfor %}
+                    {% endif %}
 
 					<div class="text-center p-t-136">
 						<a class="txt2" href="index.html">
