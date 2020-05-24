@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+{% load static %}
+<html class="no-js" lang="en">
+
+
+<head>
+
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, user-scalable=1">
+<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.typekit.net/zub3tbp.css">
+
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>The New Age AI</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+   
+
+    <!-- script
+    ================================================== -->
+    <script src="{% static 'js/modernizr.js' %}"></script>
+    <script src="{% static 'js/pace.min.js' %}"></script>
+
+
+
+    <script type="text/javascript">
+	var svg = document.getElementsByTagName("svg");
+
+var rect = document.getElementsByTagName("rect");
+
+var text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+text.setAttribute('x', '10');
+text.setAttribute('y', '20');
+text.setAttribute('fill', '#000');
+text.textContent = 'Hello, I am a blah blah blah blah blah';
+</script>
+
+    
+
+</head>
+
+<body id="top">
+
+
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+
+        <nav class="header-nav">
+
+            <a href="" class="header-nav__close" title="close"><span>Close</span></a>
+
+            <div class="header-nav__content">
+                <h3>Navigation</h3>
+                
+                <ul class="header-nav__list">
+                    <li class="current"><a class="smoothscroll"  href="#home" title="home">Home</a></li>
+                    <li><a class="smoothscroll"  href="#about" title="about">About</a></li>
+                    <li><a class="smoothscroll"  href="#workflow" title="workflow">Workflow</a></li>
+                    <li><a class="smoothscroll"  href="#info" title="Skin Disorders">Skin Disorders</a></li>
+                    <li><a class="smoothscroll"  href="#diagnosis" title="diagnosis">Diagnosis</a></li>
+                    <li><a target="_blank" href="login" title="contact">Sign in</a></li>
+                    <li><a  target="_blank" href="signup" title="contact">Sign up</a></li>
+                </ul>
+    
+                <p>AI is the new Electricity<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Andrew Ng</p>
+                
+    
+
+            </div> <!-- end header-nav__content -->
+
+        </nav>  
+
+        <a class="header-menu-toggle" href="">
+            <span class="header-menu-text">Menu</span>
+            <span class="header-menu-icon"></span>
+        </a>
+
+    </header> <!-- end s-header -->
+
+
+    <!-- home
+    ================================================== -->
+    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="{% static 'images/hero-bg.jpg' %}" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+
+        <div class="overlay"></div>
+        <div class="shadow-overlay"></div>
+
+        <div class="home-content">
+
+            <div class="row home-content__main">
+
+                <h3>Welcome to the new age AI</h3>
+
+                <h1>
+                    We attempt to change <br>
+                    how people look at <br>
+                    Medical diagnosis <br>
+                
+                </h1>
+
+                <div class="home-content__buttons">
+                    <a href="#diagnosis" class="smoothscroll btn btn--stroke">
+                        Diagnose
+                    </a>
+                    <a href="#about" class="smoothscroll btn btn--stroke">
+                        More About Us
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="home-content__scroll">
+                <a href="#about" class="scroll-link smoothscroll">
+                    <span>Scroll Down</span>
+                </a>
+            </div>
+
+           
+
+        </div> <!-- end home-content -->
+
+
+    </section> <!-- end s-home -->
+   
+
+
+
+    <!-- about
+    ================================================== -->
+    <section id='about' class="s-about">	
+    
+
+        <div class="row section-header has-bottom-sep" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead subhead--dark">Hello There</h3>
+                <h1 class="display-1 display-1--light">We Are The New Age AI</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row about-desc" data-aos="fade-up">
+            <div class="col-full">
+                <p>
+                We have developed a Deep Learning model which predicts skin disease just by looking at the picture.
+                Isn't that just amazing!!!! We have used state of the art Deep Learning methods and developed a Convulational
+                Neural Network which which is fast , efficient and reliable. This model is trained on the HAM10000 dataset publically available on kaggle . AI is changing Medical Diagnosis completely and 
+                as an AI enthusiast I have tried to contribute something.
+
+                </p>
+            </div>
+        </div> <!-- end about-desc -->
+
+        <div class="row about-stats stats block-1-4 block-m-1-2 block-mob-full" data-aos="fade-up">
+                
+            <div class="col-block stats__col">
+                <div class="stats__count">94</div>
+                <h5>Training Accuracy</h5>
+            </div>
+            <div class="col-block stats__col">
+                <div class="stats__count">82</div>
+                <h5>Validation Accuracy</h5>
+            </div>
+            <div class="col-block stats__col">
+                <div class="stats__count">87</div>
+                <h5>Recall</h5> 
+            </div>
+
+        </div> <!-- end about-stats -->
+
+       	
+
+    </section> <!-- end s-about -->
+
+
+    <!-- Workflow title
+    ================================================== -->
+    <section id='workflow' class="s-services" style="height: 1100px">
+
+        <div class="row section-header has-bottom-sep" data-aos="fade-up">
+            <div class="col-full">
+                <h1 class="display-2">Workflow</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+       <br>
+
+       <!--  Worflow start -->
+
+       	<div class="wrapper " >
+<div class="svg-container block-tab-full" data-aos="fade-up">
+  <svg version="1.1" viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet" class="svg-content">
+    
+    <defs>
+      <marker  markerWidth="4" markerHeight="10" viewBox="-2 -4 4 4" refX="0" refY="0" markerUnits="strokeWidth" orient="auto">
+        <polyline points="2,-2 0,0 2,2" stroke="#443c3d" stroke-width="0.75px" fill="none"/>
+      </marker>
+  </defs>
+ 
+    
+    <g class="box-group">
+      <g transform="translate(-5)">
+	      <circle fill="#000" cx="55" cy="50" r="45" opacity="1" />
+        <text x="28" y="58" font-family="Open Sans Condensed" font-size="12" stroke="none" fill="#f5f3e7" font-weight="100" style="text-transform:uppercase; letter-spacing: 1px">Dataset</text>
+        <line x1="102" x2="135" y1="50" y2="50" stroke-width="2" stroke="#443c3d" stroke-dasharray="2,1">
+      </g>
+
+        
+      <line x1="100" x2="136" y1="50" y2="50" stroke-width="2" stroke="#443c3d" stroke-dasharray="2,1" />
+
+
+      <g transform="translate(136)">
+      <rect fill="#39b54a" x="2" y="25" rx="3" ry="3" width="100" height="50" />
+      <text x="30" y="47" font-family="Open Sans Condensed" font-size="10" stroke="none" fill="#f5f3e7" font-weight="900" style="text-transform:uppercase; letter-spacing: 1px">Data
+        <tspan x="5" dy="17">Preprocessing</tspan>
+      </text>
+      </g>
+
+      <line x1="240" x2="268" y1="50" y2="50" stroke-width="2" stroke="#443c3d" stroke-dasharray="2,1" />
+      
+      <g transform="translate(268)">
+      <rect fill="#39b54a" x="2" y="25" rx="3" ry="3" width="100" height="50" />
+      <text x="30" y="47" font-family="Open Sans Condensed" font-size="10" stroke="none" fill="#f5f3e7" font-weight="900" style="text-transform:uppercase; letter-spacing: 1px">Data
+        <tspan x="5" dy="17">Augmentation</tspan>
+      </text>
+      </g>
+
+      <line x1="370" x2="400" y1="50" y2="50" stroke-width="2" stroke="#443c3d" stroke-dasharray="2,1" />
+      
+      <g transform="translate(400)">
+      <rect fill="#39b54a" x="2" y="25" rx="3" ry="3" width="100" height="50" />
+      <text x="13" y="47" font-family="Open Sans Condensed" font-size="10" stroke="none" fill="#f5f3e7" font-weight="900" style="text-transform:uppercase; letter-spacing: 1px">Developing
+        <tspan x="13" dy="17">CNN model</tspan>
+      </text>
+      </g>
+    </g>
+    
+    <line x1="450" x2="450" y1="77" y2="124" stroke-width="2" stroke="#443c3d" stroke-dasharray="2,1" />
+    
+    <g  transform="translate(0,100)">
+      <g transform="translate(5)">
+      <rect fill="#39b54a" x="2" y="25" rx="3" ry="3" width="100" height="50" />
+      <text x="30" y="47" font-family="Open Sans Condensed" font-size="10" stroke="none" fill="#f5f3e7" font-weight="900" style="text-transform:uppercase; letter-spacing: 1px">Web
+        <tspan x="14" dy="17">Application</tspan>
+      </text>
+      </g>
+        
+      <line x1="109" x2="136" y1="50" y2="50" stroke-width="2" stroke="#443c3d" stroke-dasharray="2,1" />
+
+      <g transform="translate(136)">
+       <rect fill="#39b54a" x="2" y="25" rx="3" ry="3" width="100" height="50" />
+      <text x="23" y="47" font-family="Open Sans Condensed" font-size="10" stroke="none" fill="#f5f3e7" font-weight="900" style="text-transform:uppercase; letter-spacing: 1px">Final
+        <tspan x="23" dy="17">Model</tspan>
+      </text>
+      </g>
+
+      <line x1="240" x2="268" y1="50" y2="50" stroke-width="2" stroke="#443c3d" stroke-dasharray="2,1" />
+      
+      <g transform="translate(268)">
+      <rect fill="#39b54a" x="2" y="25" rx="3" ry="3" width="100" height="50" />
+      <text x="8" y="47" font-family="Open Sans Condensed" font-size="8" stroke="none" fill="#fff" font-weight="900" style="text-transform:uppercase; letter-spacing: 1px">Hyperparameter
+        <tspan x="29" dy="17">Tuning</tspan>
+      </text>
+      </g>
+
+      <line x1="370" x2="400" y1="50" y2="50" stroke-width="2" stroke="#443c3d" stroke-dasharray="2,1"/>
+      
+      <g transform="translate(400)">
+      <rect fill="#39b54a" x="2" y="25" rx="3" ry="3" width="100" height="50" />
+      <text x="16" y="47" font-family="Open Sans Condensed" font-size="10" stroke="none" fill="#f5f3e7" font-weight="900" style="text-transform:uppercase; letter-spacing: 1px">Initial
+        <tspan x="16" dy="17">Training</tspan>
+      </text>
+      </g>
+    </g>
+    
+    
+	</svg>
+</div>
+</div>
+
+
+
+        </div> <!-- end services-list --> 
+    </section> <!-- end s-services -->
+  
+
+<!-- Worflow end -->
+
+    <!-- works
+    ================================================== -->
+    <section id='info' class="s-works ">
+
+        <div class="intro-wrap">
+                
+            <div class="row section-header has-bottom-sep light-sep" data-aos="fade-up">
+                <div class="col-full">
+                    <h1 class="display-2 display-2--light">What are skin disorders?</h1>
+                </div>
+            </div> <!-- end section-header -->
+
+
+            <div class="row about-desc" data-aos="fade-up">
+
+        	<div class="col-full" style="font-size: 16px">
+
+        	<img src="{% static 'images/Actinic keratoses/ISIC_0024468.jpg' %}" style="height: 200px; ">
+        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        	<img src="{% static 'images/Benign keratosis-like lesions/ISIC_0024930.jpg' %}" style="height: 200px; "><br><br>
+
+        	<p style="text-align: justify;">
+            Skin disorders vary greatly in symptoms and severity. They can be temporary or permanent, and 
+            may be painless or painful. Some have situational causes, while others may be genetic. Some skin 
+            conditions are minor, and others can be life-threatening. While most skin disorders are minor, 
+            others can indicate a more serious issue. 
+        </p>
+        <p style="text-align: justify;">
+            In the observational study, skin diseases contributed 1.79% to the global burden of disease 
+            measured in disability-adjusted life years (DALYs). Skin diseases arranged in order of decreasing 
+            global DALYs are as follows: dermatitis (atopic, contact, seborrheic), acne vulgaris, urticaria, 
+            psoriasis, viral skin diseases, fungal skin diseases, scabies, melanoma, pyoderma, cellulitis, 
+            keratinocyte carcinoma, decubitus ulcer, and alopecia areata. Skin diseases remain a major cause 
+            of disability worldwide. An objective measure of burden, such as the DALY, allows for comparison
+            of diverse diseases across geography and time.
+        </p>
+        <p style="text-align: justify;">
+            Disability secondary to skin conditions is substantial worldwide. The Global Burden of Disease 
+            Study 2013 includes estimates of global morbidity and mortality due to skin diseases. 
+            For nonfatal estimates, data were found by literature search using PubMed and Google Scholar 
+            in English and Spanish for years 1980 through 2013 and by accessing administrative data on 
+            hospital inpatient and outpatient episodes. Data for fatal estimates were based on vital 
+            registration and verbal autopsy data.
+        </p>
+        <p style="text-align: justify;">
+            Skin conditions contributed 1.79% to the global burden of disease measured in DALYs from 
+            306 diseases and injuries in 2013. Individual skin diseases varied in size from 0.38% of total
+            burden for dermatitis (atopic, contact, and seborrheic dermatitis), 0.29% for acne vulgaris, 
+            0.19% for psoriasis, 0.19% for urticaria, 0.16% for viral skin diseases, 0.15% for fungal skin 
+            diseases, 0.07% for scabies, 0.06% for malignant skin melanoma, 0.05% for pyoderma, 0.04% for
+            cellulitis, 0.03% for keratinocyte carcinoma, 0.03% for decubitus ulcer, and 0.01% for alopecia
+            areata. All other skin and subcutaneous diseases composed 0.12% of total DALYs.
+        </p>
+        <p style="text-align: justify;">
+            Skin and subcutaneous diseases were the 18th leading cause of global DALYs in Global Burden 
+            of Disease 2013. Excluding mortality, skin diseases were the fourth leading cause of disability 
+            worldwide.
+        </p>
+        <p style="text-align: justify;">
+            So there is a need to help people worldwide with skin disease. Therefore, the idea of this application
+            arises. This application helps people to get to know which disease they are going through. 
+            Patient need to sign up to this application for running diagnose test. After signing up, they 
+            have to upload a microscopic image of the area where they have symptoms. Using deep learning, this 
+            application will predict the disease they are suffering from. Patient need to be signed in to run this test.
+            <br>Our algorithm identifies 7 diseases, which are:
+           
+            <ul style="text-align: left">
+            	<li>
+            		Actinic keratoses
+            	</li>
+            	<li>
+            		Basal cell carcinoma
+            	</li>
+            	<li>
+            		Benign keratosis-like lesions
+            	</li>
+            	<li>
+            		Dermatofibroma
+            	</li>
+            	<li>
+            		Melanocytic nevi
+            	</li>
+            	<li>
+            		Melanoma
+            	</li>
+            	<li>
+            		Vascular lesions
+            	</li>
+            </ul>
+
+        </p>
+        		
+        	</div>
+
+        </div> <!-- end works-content -->
+
+
+        </div> <!-- end intro-wrap -->
+
+        
+    </section> <!-- end s-works -->
+
+
+    <!-- clients
+    ================================================== -->
+    <section id="diagnosis" class="s-clients" style="background-color: white">
+
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h1 class="display-2">Diagnosis</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row clients-outer" data-aos="fade-up">
+
+
+ <center>
+<div class="main">
+<div class="uploadImage" id="uploadImage">
+  <h1  style=" color:white;  font-size: 35px;  text-align: center;"><b>Upload Image</b></h1>
+ 
+    <form class="formimg" action="" method="post" enctype="multipart/form-data">
+   <div style="margin-left:200px; margin-right:200px; color:#39b54a; padding: 10px 20px;  text-align: center; font-size:17px; background-color:white; border-radius:20px;"><b>Select image to upload</b></div><br>
+  <br>
+  <input type="file" name="fileToUpload"  style="margin-left: 200px; align-self :center; color:white; padding: 10px 20px; font-size:17px; border-radius:20px;"><br><br><br>
+  <input class="btn" type="submit" value="Upload Image" name="submit">
+  </form>
+  <br>
+<div class="" style=" font-size: 25px; color:white; text-align:center;">
+  <b>The disease you are having is!</b><br><br><br>
+
+</div>
+
+</div>
+</div>
+  </center>
+
+
+        </div> 
+    </section> <!-- end s-clients -->
+
+
+
+   <!-- footer
+    ================================================== -->
+  
+  <!-- end footer -->
+
+
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
+                    "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
+                    "Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
+                "Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div> <!-- end photoSwipe background -->
+
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader">
+            <div class="line-scale-pulse-out">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'js/plugins.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+
+
+
+</body>
+
+</html>
