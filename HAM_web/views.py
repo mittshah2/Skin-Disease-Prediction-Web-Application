@@ -6,8 +6,6 @@ from django.contrib.auth.models import User,auth
 def home(requests):
     return render(requests,'index.html')
 
-def login(requests):
-    return render(requests,'login.html')
 
 def signup(requests):
     if requests.method=='GET':
@@ -32,7 +30,7 @@ def signup(requests):
             messages.info(requests, 'Age should be a digit')
             return redirect('signup')
 
-        if name.isalnum():
+        if name.isalpha()==False:
             messages.info(requests,'Name should contain only alphabets')
             return redirect('signup')
         if(password!=cpassword):
@@ -48,4 +46,24 @@ def signup(requests):
         if user1 is not None:
             auth.login(requests,user1)
         return redirect('/')
+
+
+def login(requests):
+    if requests.method == 'GET':
+        return render(requests, 'login.html')
+    else:
+        username=requests.POST['uname']
+        password=requests.POST['pass']
+        user1 = auth.authenticate(username=username, password=password)
+        if user1 is not None:
+            auth.login(requests, user1)
+            return redirect('/')
+        else:
+            messages.info(requests,'Invalid credentials')
+            return redirect('login')
+
+def logout(requests):
+    auth.logout(requests)
+    return redirect('/')
+
 

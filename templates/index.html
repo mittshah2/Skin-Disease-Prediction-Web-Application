@@ -71,13 +71,21 @@ text.textContent = 'Hello, I am a blah blah blah blah blah';
                 <h3>Navigation</h3>
                 
                 <ul class="header-nav__list">
+                {% if user.is_authenticated %}
+                    <li class="current"><p>Hey, {{ user.first_name }}</p></li>
+                 {% endif %}
                     <li class="current"><a class="smoothscroll"  href="#home" title="home">Home</a></li>
                     <li><a class="smoothscroll"  href="#about" title="about">About</a></li>
                     <li><a class="smoothscroll"  href="#workflow" title="workflow">Workflow</a></li>
                     <li><a class="smoothscroll"  href="#info" title="Skin Disorders">Skin Disorders</a></li>
                     <li><a class="smoothscroll"  href="#diagnosis" title="diagnosis">Diagnosis</a></li>
+                    {% if user.is_authenticated %}
+                        <li><a target="_blank" href="logout" title="contact">Logout</a></li>
+                    {% else %}
                     <li><a target="_blank" href="login" title="contact">Sign in</a></li>
                     <li><a  target="_blank" href="signup" title="contact">Sign up</a></li>
+                    {% endif %}
+
                 </ul>
     
                 <p>AI is the new Electricity<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Andrew Ng</p>
