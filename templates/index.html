@@ -439,11 +439,50 @@ text.textContent = 'Hello, I am a blah blah blah blah blah';
   <input class="btn" type="submit" value="Upload Image" name="submit">
   </form>
   <br>
+
     {% if disp %}
 <div class="" style=" font-size: 25px; color:white; text-align:center;">
-  <b>The disease you are having is {{ disease }}</b><br><br><br>
-
+  <b>The disease you are having is {{ disease }}</b><br><br>
+<center>
+<div style=" background-color: white; width: 400px">
+     <a target="_blank" href="https://www.google.com/search?q=dermatologist+near+me">See doctors near you</a>&nbsp;&nbsp;&nbsp;&nbsp;
 </div>
+     {% if val == 0 %}
+         <div style=" background-color: white; width: 400px">
+             <a target="_blank" href="https://www.skincancer.org/skin-cancer-information/actinic-keratosis/" >Know more about the disease</a>
+        </div>
+     {% elif val == 1 %}
+        <div style=" background-color: white; width: 400px">
+            <a target="_blank" href="https://www.skincancer.org/skin-cancer-information/basal-cell-carcinoma/" >Know more about the disease</a>
+        </div>
+     {% elif val == 2 %}
+<div style=" background-color: white; width: 400px">
+    <a target="_blank" href="https://www.mayoclinic.org/diseases-conditions/seborrheic-keratosis/symptoms-causes/syc-20353878" >Know more about the disease</a>
+        </div>
+
+     {% elif val == 3 %}
+<div style=" background-color: white; width: 400px">
+    <a target="_blank" href="https://www.medicalnewstoday.com/articles/318870#symptoms-and-complications" >Know more about the disease</a>
+        </div>
+     {% elif val == 4 %}
+<div style=" background-color: white; width: 400px">
+    <a target="_blank" href="https://emedicine.medscape.com/article/1058445-overview" >Know more about the disease</a>
+        </div>
+     {% elif val == 5 %}
+<div style=" background-color: white; width: 400px">
+    <a target="_blank" href="https://www.skincancer.org/skin-cancer-information/melanoma/melanoma-warning-signs-and-images/" >Know more about the disease</a>
+        </div>
+     {% elif val == 6 %}
+<div style=" background-color: white; width: 400px">
+    <a target="_blank" href="https://www.ssmhealth.com/cardinal-glennon/pediatric-plastic-reconstructive-surgery/hemangiomas" >Know more about the disease</a>
+        </div>
+
+
+     {% endif %}
+   <br><br><br>
+</center>
+
+
     {% endif %}
 
 </div>

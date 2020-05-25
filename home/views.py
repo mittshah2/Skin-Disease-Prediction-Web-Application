@@ -29,14 +29,14 @@ def home(requests):
         label = {
             0:'Actinic keratoses',
             1:'Basal cell carcinoma',
-            2:'Benign keratosis-like lesions',
+            2:'Seborrhoeic Keratosis',
             3:'Dermatofibroma',
             4:'Melanocytic nevi',
             5:'Melanoma',
             6:'Vascular lesions'
         }
         disease=label[pred]
-        params={'disease':disease,'disp':True}
+        params={'disease':disease,'disp':True,'val':pred}
 
         return render(requests,'index.html',params)
 
