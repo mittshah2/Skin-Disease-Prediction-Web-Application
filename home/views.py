@@ -5,7 +5,8 @@ from django.contrib.auth.models import User,auth
 import matplotlib.pyplot as p
 import numpy as np
 import cv2
-
+from .models import pics
+from PIL import Image
 
 
 def home(requests):
@@ -13,12 +14,10 @@ def home(requests):
         return render(requests,'index.html')
     else:
         img=requests.FILES['img']
-        data=[]
-        for i in img.read():
-            data.append(i)
-        data=np.asarray(data)
+        obj=pics.objects.create(img=img)
+        image=Image.open(obj.img)
 
-        print(data.shape)
+
 
         return redirect('/')
 
