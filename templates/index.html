@@ -432,9 +432,10 @@ text.textContent = 'Hello, I am a blah blah blah blah blah';
   <h1  style=" color:white;  font-size: 35px;  text-align: center;"><b>Upload Image</b></h1>
  
     <form class="formimg" action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
    <div style="margin-left:200px; margin-right:200px; color:#39b54a; padding: 10px 20px;  text-align: center; font-size:17px; background-color:white; border-radius:20px;"><b>Select image to upload</b></div><br>
   <br>
-  <input type="file" name="fileToUpload"  style="margin-left: 200px; align-self :center; color:white; padding: 10px 20px; font-size:17px; border-radius:20px;"><br><br><br>
+  <input type="file" name="img"  style="margin-left: 200px; align-self :center; color:white; padding: 10px 20px; font-size:17px; border-radius:20px;"><br><br><br>
   <input class="btn" type="submit" value="Upload Image" name="submit">
   </form>
   <br>

@@ -2,9 +2,25 @@ from django.shortcuts import render,redirect
 from django.contrib import messages
 from django.http import HttpResponse
 from django.contrib.auth.models import User,auth
+import matplotlib.pyplot as p
+import numpy as np
+import cv2
+
+
 
 def home(requests):
-    return render(requests,'index.html')
+    if requests.method=='GET':
+        return render(requests,'index.html')
+    else:
+        img=requests.FILES['img']
+        data=[]
+        for i in img.read():
+            data.append(i)
+        data=np.asarray(data)
+
+        print(data.shape)
+
+        return redirect('/')
 
 
 def signup(requests):
@@ -24,7 +40,6 @@ def signup(requests):
         if blood not in bg:
             messages.info(requests, 'Enter a valid blood group')
             return redirect('signup')
-
 
         if age.isdigit()==False:
             messages.info(requests, 'Age should be a digit')
