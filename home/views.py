@@ -12,7 +12,8 @@ import os
 
 def home(requests):
     if requests.method=='GET':
-        return render(requests,'index.html')
+        params={'disp':False}
+        return render(requests,'index.html',params)
     else:
         img=requests.FILES['img']
         obj=pics.objects.create(img=img)
@@ -35,7 +36,7 @@ def home(requests):
             6:'Vascular lesions'
         }
         disease=label[pred]
-        params={'disease':disease}
+        params={'disease':disease,'disp':True}
 
         return render(requests,'index.html',params)
 

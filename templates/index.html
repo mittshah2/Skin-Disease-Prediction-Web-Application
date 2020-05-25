@@ -80,10 +80,10 @@ text.textContent = 'Hello, I am a blah blah blah blah blah';
                     <li><a class="smoothscroll"  href="#info" title="Skin Disorders">Skin Disorders</a></li>
                     <li><a class="smoothscroll"  href="#diagnosis" title="diagnosis">Diagnosis</a></li>
                     {% if user.is_authenticated %}
-                        <li><a target="_blank" href="logout" title="contact">Logout</a></li>
+                        <li><a href="logout" title="contact">Logout</a></li>
                     {% else %}
-                    <li><a target="_blank" href="login" title="contact">Sign in</a></li>
-                    <li><a  target="_blank" href="signup" title="contact">Sign up</a></li>
+                    <li><a href="login" title="contact">Login</a></li>
+                    <li><a href="signup" title="contact">Sign up</a></li>
                     {% endif %}
 
                 </ul>
@@ -425,7 +425,7 @@ text.textContent = 'Hello, I am a blah blah blah blah blah';
 
         <div class="row clients-outer" data-aos="fade-up">
 
-
+{% if user.is_authenticated %}
  <center>
 <div class="main">
 <div class="uploadImage" id="uploadImage">
@@ -439,17 +439,25 @@ text.textContent = 'Hello, I am a blah blah blah blah blah';
   <input class="btn" type="submit" value="Upload Image" name="submit">
   </form>
   <br>
+    {% if disp %}
 <div class="" style=" font-size: 25px; color:white; text-align:center;">
   <b>The disease you are having is {{ disease }}</b><br><br><br>
 
 </div>
+    {% endif %}
 
 </div>
 </div>
   </center>
 
 
-        </div> 
+        </div>
+    {% else %}
+    <h1>Please login/signup to diagnose</h1>
+    <br>
+   <a href="login">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="signup">Sign Up</a>
+
+    {% endif %}
     </section> <!-- end s-clients -->
 
 
