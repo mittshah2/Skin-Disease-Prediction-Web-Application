@@ -4,4 +4,4 @@ from django.db import models
 
 
 class pics(models.Model):
-    img=models.ImageField()
+    img=models.ImageField(upload_to='test')

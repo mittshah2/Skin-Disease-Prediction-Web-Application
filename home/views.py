@@ -7,7 +7,8 @@ import numpy as np
 import cv2
 from .models import pics
 from PIL import Image
-
+from tensorflow.keras.models import load_model
+import os
 
 def home(requests):
     if requests.method=='GET':
@@ -16,7 +17,13 @@ def home(requests):
         img=requests.FILES['img']
         obj=pics.objects.create(img=img)
         image=Image.open(obj.img)
-
+        image=image.resize((135,180))
+        image=np.array(image)
+        image=np.expand_dims(image,axis=0)
+        base=os.getcwd()
+        path=os.path.join(os.path.join(base,'home'),'static_home')
+        path=os.path.join(path,'model.h5')
+        # model=load_model(path)
 
 
         return redirect('/')
