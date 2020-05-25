@@ -23,10 +23,21 @@ def home(requests):
         base=os.getcwd()
         path=os.path.join(os.path.join(base,'home'),'static_home')
         path=os.path.join(path,'model.h5')
-        # model=load_model(path)
+        model=load_model(path)
+        pred=model.predict_classes(image)[0]
+        label = {
+            0:'Actinic keratoses',
+            1:'Basal cell carcinoma',
+            2:'Benign keratosis-like lesions',
+            3:'Dermatofibroma',
+            4:'Melanocytic nevi',
+            5:'Melanoma',
+            6:'Vascular lesions'
+        }
+        disease=label[pred]
+        params={'disease':disease}
 
-
-        return redirect('/')
+        return render(requests,'index.html',params)
 
 
 def signup(requests):
