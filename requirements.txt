@@ -175,7 +175,7 @@ statsmodels==0.11.0
 subprocess32==3.5.4
 suds==0.4
 tensorboard==1.15.0
-tensorflow==1.15.0
+tensorflow==1.15.2
 tensorflow-addons==0.10.0
 tensorflow-datasets==3.1.0
 tensorflow-estimator==1.15.1
