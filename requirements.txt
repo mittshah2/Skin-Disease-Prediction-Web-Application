@@ -31,7 +31,7 @@ defusedxml==0.6.0
 dill==0.3.1.1
 distlib==0.3.0
 dj-database-url==0.5.0
-Django==2.2.10
+Django==2.2.13
 django-crispy-forms==1.7.2
 django-heroku==0.3.1
 django-mathfilters==1.0.0
