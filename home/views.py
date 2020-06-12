@@ -2,13 +2,12 @@ from django.shortcuts import render,redirect
 from django.contrib import messages
 from django.http import HttpResponse
 from django.contrib.auth.models import User,auth
-import matplotlib.pyplot as p
 import numpy as np
-import cv2
 from .models import pics
 from PIL import Image
 from tensorflow.keras.models import load_model
 import os
+import cv2
 
 def home(requests):
     if requests.method=='GET':
@@ -18,22 +17,22 @@ def home(requests):
         img=requests.FILES['img']
         obj=pics.objects.create(img=img)
         image=Image.open(obj.img)
-        image=image.resize((135,180))
         image=np.array(image)
+        image=cv2.resize(image,(28,28))/255
         image=np.expand_dims(image,axis=0)
         base=os.getcwd()
         path=os.path.join(os.path.join(base,'home'),'static_home')
-        path=os.path.join(path,'model.h5')
+        path=os.path.join(path,'ham28(93&89).h5')
         model=load_model(path)
-        pred=model.predict_classes(image)[0]
+        pred=np.argmax(model.predict(image))
         label = {
             0:'Actinic keratoses',
             1:'Basal cell carcinoma',
             2:'Seborrhoeic Keratosis',
             3:'Dermatofibroma',
             4:'Melanocytic nevi',
-            5:'Melanoma',
-            6:'Vascular lesions'
+            6:'Melanoma',
+            5:'Vascular lesions'
         }
         disease=label[pred]
         params={'disease':disease,'disp':True,'val':pred}
