@@ -180,7 +180,7 @@ tensorboard==2.2.2
 tensorboard-plugin-wit==1.6.0.post3
 tensorflow==2.2.1
 tensorflow-estimator==2.2.0
-tensorflow-gpu==2.2.1
+tensorflow-gpu==2.4.0
 tensorflow-gpu-estimator==2.2.0
 tensorflow-hub==0.8.0
 tensorflow-metadata==0.22.0
