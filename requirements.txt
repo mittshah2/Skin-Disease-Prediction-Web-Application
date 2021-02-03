@@ -178,7 +178,7 @@ suds==0.4
 tabulate==0.8.7
 tensorboard==2.2.2
 tensorboard-plugin-wit==1.6.0.post3
-tensorflow==2.2.1
+tensorflow==2.4.0
 tensorflow-estimator==2.2.0
 tensorflow-gpu==2.2.1
 tensorflow-gpu-estimator==2.2.0
