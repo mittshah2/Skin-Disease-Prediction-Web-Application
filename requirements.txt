@@ -22,7 +22,7 @@ configparser==5.0.0
 contextlib2==0.6.0.post1
 cycler==0.10.0
 Cython==0.29.17
-dask==2.16.0
+dask==2021.10.0
 data==0.4
 dataclasses==0.6
 decorator==4.4.1
