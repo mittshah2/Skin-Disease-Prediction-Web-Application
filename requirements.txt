@@ -11,7 +11,7 @@ billiard==3.6.3.0
 bleach==3.3.0
 bs4==0.0.1
 cachetools==4.0.0
-celery==4.4.2
+celery==5.2.2
 certifi==2019.11.28
 chardet==3.0.4
 click==7.1.2
